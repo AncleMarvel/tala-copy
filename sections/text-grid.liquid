@@ -1,0 +1,44 @@
+<div class="text-grid">
+    <h2 class="text-grid-heading txt-lg">
+        {{ section.settings.heading }}
+    </h2>
+    <div class="text-grid-main__line"></div>
+    <div class="text-grid-main">
+        <h5 class="text-grid-main__left txt-m">
+            {{ section.settings.left_text }}
+        </h5>
+        <div class="text-grid-main__line text-grid-main__line--vertical"></div>
+        <h6 class="text-grid-main__right txt-s">
+            {{ section.settings.left_text }}
+        </h6>
+    </div>
+    <div class="text-grid-main__line"></div>
+</div>
+
+{{ 'section-text-grid.css' | asset_url | stylesheet_tag }}
+
+{% schema %}
+{
+    "name": "Products list",
+    "settings": [
+        {
+            "type": "richtext",
+            "id": "heading",
+            "label": "Heading",
+            "default": "<p>I FINISHED THE</p><p>BAG & REGRET</p><p>NOTHING.</p>"
+        },
+        {
+            "type": "text",
+            "id": "left_text",
+            "label": "Left text",
+            "default": "SO CRUNCHY I GET NOISE COMPLAINTS."
+        },
+        {
+            "type": "text",
+            "id": "right_text",
+            "label": "Right text",
+            "default": "THIS IS WHAT \"FRUIT SNACKS\" SHOULD HAVE ALWAYS BEEN"
+        }
+    ]
+}
+{% endschema %}

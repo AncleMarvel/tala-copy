@@ -1,0 +1,28 @@
+.p-list-main__container_product,
+.p-list-main__container_product * {
+    text-decoration: none;
+}
+
+.p-list-main__product-title,
+.p-list-main__product_arrow {
+    transition: .25s;
+    -webkit-transition: .25s;
+    -moz-transition: .25s;
+    -ms-transition: .25s;
+    -o-transition: .25s;
+}
+
+.p-list-main__product_arrow {
+    opacity: 0;
+}
+
+.p-list-main__container_product:hover {
+    .p-list-main__product-title {
+        color: var(--dark);
+    }
+
+    .p-list-main__product_arrow {
+        opacity: 1;
+        will-change: opacity;
+    }
+}

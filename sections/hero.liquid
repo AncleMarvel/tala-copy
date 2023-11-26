@@ -1,0 +1,65 @@
+<div class="hero">
+    <h1 class="hero-heading">
+        <span class="hero-heading__text c-h1">
+            {{ section.settings.heading }}
+        </span>
+        <span class="hero-heading__superscript c-h1">
+            {{ section.settings.heading_superscript }}
+        </span>
+    </h1>
+    <div class="hero-footer">
+        <div class="hero-richtext__splitted-wrapper c-h3">
+            {{ section.settings.richtext }}
+        </div>
+        <a href="{{ section.settings.link_url }}" class="hero-link c-link">
+            {{ section.settings.link_text }}
+        </a>
+    </div>
+    <div class="hero-image-wrapper">
+        {{ section.settings.image | image_url: width: 1440 | image_tag }}
+    </div>
+</div>
+
+{{ 'section-hero.css' | asset_url | stylesheet_tag }}
+
+{% schema %}
+{
+    "name": "Hero",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "TALA"
+        },
+        {
+            "type": "text",
+            "id": "heading_superscript",
+            "label": "Heading superscript",
+            "default": "®"
+        },
+        {
+            "type": "richtext",
+            "id": "richtext",
+            "label": "Richtext",
+            "default": "<p>We're bringing fruit snacks back to their roots with perfectly ripe fruit bursting with flavor.</p>"
+        },
+        {
+            "type": "text",
+            "id": "link_text",
+            "label": "Link text",
+            "default": "SHOP AMAZON"
+        },
+        {
+            "type": "url",
+            "id": "link_url",
+            "label": "Link url"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        }
+    ]
+}
+{% endschema %}

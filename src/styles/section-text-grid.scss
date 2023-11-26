@@ -1,0 +1,46 @@
+.text-grid {
+    width: 100%;
+}
+
+.text-grid-heading {
+    width: 66.6667vw;
+    max-width: 66.6667vw;
+    margin-top: 20vh;
+    margin-left: var(--ml);
+    margin-bottom: 10vh;
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.text-grid-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30vh;
+}
+
+.text-grid-main__line {
+    width: 100%;
+    height: 1px;
+    border-style: none none dotted;
+    border-width: 0 0 1px;
+    border-color: transparent transparent var(--sand);
+}
+
+.text-grid-main__line--vertical {
+    width: 1px;
+    height: 100%;
+    border: none;
+    border-right: 1px dotted var(--sand);
+}
+
+.text-grid-main__left {
+    margin-left: var(--ml);
+}
+
+.text-grid-main__right {
+    margin: 0 var(--ml);
+}

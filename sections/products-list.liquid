@@ -1,0 +1,54 @@
+<div class="p-list">
+    <h2 class="p-list-heading c-h2">
+        {{ section.settings.heading }}
+    </h2>
+    <div class="p-list-main">
+        <div class="p-list-main__header">
+            <span class="p-list-main__header_label">
+                {{ section.settings.header_label }}
+            </span>
+        </div>
+        <div class="p-list-main__container">
+            {% for product in section.settings.p_list %}
+                <a class="p-list-main__container_product" href="{{ product.url }}">
+                    <span class="p-list-main__container_product-index c-subtext">
+                        {% unless forloop.index >= 10 %}Ø{% endunless %}{{ forloop.index }}
+                    </span>
+                    <h6 class="p-list-main__product-title c-name">
+                        {{ product.title }}
+                    </h6>
+                    <span class="p-list-main__product_arrow">
+                        {% render 'icon', icon: 'arrow-top-right' %}
+                    </span>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{{ 'section-products-list.css' | asset_url | stylesheet_tag }}
+
+{% schema %}
+{
+    "name": "Products list",
+    "settings": [
+        {
+            "type": "richtext",
+            "id": "heading",
+            "label": "Heading",
+            "default": "<p>We're bringing fruit snacks back to</p><p>We're bringing fruit snacks back to</p><p>perfectly ripe fruit bursting with flavor.</p>"
+        },
+        {
+            "type": "text",
+            "id": "header_label",
+            "label": "Header heading",
+            "default": "AVAILABLE IN"
+        },
+        {
+            "type": "product_list",
+            "id": "p_list",
+            "label": "Products list"
+        }
+    ]
+}
+{% endschema %}

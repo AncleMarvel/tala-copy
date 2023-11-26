@@ -1,0 +1,36 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "heading": "TALA",
+        "heading_superscript": "®",
+        "richtext": "<p>An entirely<\/p><p>new fruit snack — made of fruit.<\/p>",
+        "link_text": "SHOP AMAZON",
+        "link_url": "",
+        "image": "shopify:\/\/shop_images\/Hero-bg-mango.png"
+      }
+    },
+    "products-list": {
+      "type": "products-list",
+      "settings": {
+        "heading": "<p>We're bringing fruit snacks back to their roots with <em>perfectly ripe fruit bursting with flavor<\/em>.<\/p>",
+        "header_label": "AVAILABLE IN",
+        "p_list": [
+          "the-3p-fulfilled-snowboard",
+          "the-collection-snowboard-hydrogen",
+          "the-collection-snowboard-liquid"
+        ]
+      }
+    },
+    "text-grid": {
+      "type": "text-grid",
+      "settings": {}
+    }
+  },
+  "order": [
+    "hero",
+    "products-list",
+    "text-grid"
+  ]
+}
