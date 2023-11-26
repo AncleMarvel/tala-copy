@@ -5,7 +5,7 @@
       "settings": {
         "heading": "TALA",
         "heading_superscript": "®",
-        "richtext": "<p>An entirely<\/p><p>new fruit snack — made of fruit.<\/p>",
+        "richtext": "<p>An entirely<\/p><p>new fruit snack — <\/p><p>made of fruit.<\/p>",
         "link_text": "SHOP AMAZON",
         "link_url": "",
         "image": "shopify:\/\/shop_images\/Hero-bg-mango.png"
@@ -25,7 +25,11 @@
     },
     "text-grid": {
       "type": "text-grid",
-      "settings": {}
+      "settings": {
+        "heading": "<p>I FINISHED THE<\/p><p>BAG & REGRET<\/p><p>NOTHING.<\/p>",
+        "left_text": "SO CRUNCHY I GET NOISE COMPLAINTS.",
+        "right_text": "THIS IS WHAT \"FRUIT SNACKS\" SHOULD HAVE ALWAYS BEEN"
+      }
     }
   },
   "order": [

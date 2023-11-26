@@ -1,19 +1,28 @@
 <div class="hero">
-    <h1 class="hero-heading">
-        <span class="hero-heading__text c-h1">
-            {{ section.settings.heading }}
-        </span>
-        <span class="hero-heading__superscript c-h1">
-            {{ section.settings.heading_superscript }}
-        </span>
-    </h1>
-    <div class="hero-footer">
-        <div class="hero-richtext__splitted-wrapper c-h3">
-            {{ section.settings.richtext }}
+    <div class="hero__text-content">
+        <div class="hero__left-column">
+            <h1 class="hero-heading">
+                {% assign letters = section.settings.heading | split: '' %}
+                <div class="hero-heading__text">
+                    {% for letter in letters %}
+                        <div class="hero-heading__letter c-h1">
+                            {{ letter }}
+                        </div>
+                    {% endfor %}
+                </div>
+                <span class="hero-heading__superscript c-superscript">
+                    {{ section.settings.heading_superscript }}
+                </span>
+            </h1>
+            <div class="hero-richtext__splitted-wrapper c-h3">
+                {{ section.settings.richtext }}
+            </div>
         </div>
-        <a href="{{ section.settings.link_url }}" class="hero-link c-link">
-            {{ section.settings.link_text }}
-        </a>
+        <div class="hero__right-column">
+            <a href="{{ section.settings.link_url }}" class="hero-link c-link">
+                {{ section.settings.link_text }}
+            </a>
+        </div>
     </div>
     <div class="hero-image-wrapper">
         {{ section.settings.image | image_url: width: 1440 | image_tag }}

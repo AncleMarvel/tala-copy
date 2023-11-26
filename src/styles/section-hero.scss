@@ -1,3 +1,47 @@
+.hero {
+    width: 100%;
+}
+
+.hero__text-content {
+    width: 100%;
+    padding: 0 var(--ml);
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10vh;
+}
+
+.hero__left-column {
+    width: auto;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.hero__right-column {
+    padding-top: 38vh;
+    margin-left: 20vw;
+}
+
+.hero-heading {
+    display: inline-flex;
+    margin-bottom: 10vh;
+}
+
+.hero-heading__letter {
+    display: inline-block;
+}
+
+.hero-richtext__splitted-wrapper {
+    p:first-child {
+        text-align: right;
+    }
+}
+
+.hero-image-wrapper {
+    width: 100%;
+}
+
 .hero-image-wrapper img {
     width: 100%;
+    height: auto;
 }
