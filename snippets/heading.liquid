@@ -1,0 +1,11 @@
+{% assign letters = heading | split: '' %}
+<div class="{{ context }}-heading__text splitted-heading">
+    {% for letter in letters %}
+        <div class="{{ context }}-heading__letter splitted-heading__letter c-h1">
+            {{ letter }}
+        </div>
+    {% endfor %}
+</div>
+<span class="{{ context }}-heading__superscript c-superscript">
+    {{ superscript }}
+</span>

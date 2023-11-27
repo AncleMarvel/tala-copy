@@ -1,0 +1,55 @@
+<div class="text-lines">
+    <h2 class="text-lines__heading c-h2">
+        {{ section.settings.heading }}
+    </h2>
+    <div class="text-lines__container">
+        {% for block in section.blocks %}
+            {% assign text = block.settings.text %}
+            {% assign qty = block.settings.qty %}
+            <div class="text-line">
+                {% for item in (1..qty) %}
+                    {% assign moduledIndex = forloop.index | modulo: 2 %}
+                    <span class="text-line__word c-h1 {% if moduledIndex == 0 %}text-line__word--dark{% endif %}">
+                        {{ text }}
+                    </span>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{{ 'section-text-lines.css' | asset_url | stylesheet_tag }}
+
+{% schema %}
+{
+    "name": "Text lines",
+    "settings": [
+        {
+            "type": "richtext",
+            "id": "heading",
+            "label": "Heading",
+            "default": "<p>Number of ingredients:</p>"
+        }
+    ],
+    "blocks": [
+        {
+            "name": "Text line",
+            "type": "text_line",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "text",
+                    "label": "Text",
+                    "default": "ONE"
+                },
+                {
+                    "type": "number",
+                    "id": "qty",
+                    "label": "Quantity",
+                    "default": 6
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

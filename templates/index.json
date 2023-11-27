@@ -38,12 +38,55 @@
         "subheading": "<p>Yes, you can actually eat TALA in space.<\/p><p>Now you just have to figure out how to get<\/p><p>there.<\/p>",
         "bcg": "shopify:\/\/shop_images\/stars.gif"
       }
+    },
+    "text-lines": {
+      "type": "text-lines",
+      "blocks": {
+        "071e2905-3f1d-415e-95a5-35a363acc592": {
+          "type": "text_line",
+          "settings": {
+            "text": "ONE",
+            "qty": 6
+          }
+        },
+        "41ac78a9-ee0d-48e1-95b5-a66ef89969be": {
+          "type": "text_line",
+          "settings": {
+            "text": "ONE",
+            "qty": 6
+          }
+        },
+        "3f6e2e70-7ba3-4488-ac59-5d1d6ec15bf3": {
+          "type": "text_line",
+          "settings": {
+            "text": "ONE",
+            "qty": 6
+          }
+        },
+        "e8afc7d1-4cf1-4aa0-b3dc-ae192913471d": {
+          "type": "text_line",
+          "settings": {
+            "text": "ONE",
+            "qty": 6
+          }
+        }
+      },
+      "block_order": [
+        "071e2905-3f1d-415e-95a5-35a363acc592",
+        "41ac78a9-ee0d-48e1-95b5-a66ef89969be",
+        "3f6e2e70-7ba3-4488-ac59-5d1d6ec15bf3",
+        "e8afc7d1-4cf1-4aa0-b3dc-ae192913471d"
+      ],
+      "settings": {
+        "heading": "<p>Number of<\/p><p><em>ingredients<\/em>:<\/p>"
+      }
     }
   },
   "order": [
     "hero",
     "products-list",
     "text-grid",
-    "text-on-background"
+    "text-on-background",
+    "text-lines"
   ]
 }

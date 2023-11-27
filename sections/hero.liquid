@@ -2,17 +2,7 @@
     <div class="hero__text-content">
         <div class="hero__left-column">
             <h1 class="hero-heading">
-                {% assign letters = section.settings.heading | split: '' %}
-                <div class="hero-heading__text">
-                    {% for letter in letters %}
-                        <div class="hero-heading__letter c-h1">
-                            {{ letter }}
-                        </div>
-                    {% endfor %}
-                </div>
-                <span class="hero-heading__superscript c-superscript">
-                    {{ section.settings.heading_superscript }}
-                </span>
+                {% render 'heading', heading: section.settings.heading, context: 'hero', superscript: section.settings.heading_superscript %}
             </h1>
             <div class="hero-richtext__splitted-wrapper c-h3">
                 {{ section.settings.richtext }}
