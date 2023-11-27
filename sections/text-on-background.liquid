@@ -1,0 +1,48 @@
+<div class="text-on-background">
+    <div class="text-on-background__content">
+        <h2 class="text-on-background__heading c-h2">
+            {{ section.settings.heading }}
+        </h2>
+        <div class="text-on-background__subheading-wrapper">
+            <div class="text-on-background__subheading c-body">
+                {{ section.settings.subheading }}
+            </div>
+        </div>
+        <span class="text-on-background__icon">
+            {% render 'icon', icon: 'smile' %}
+        </span>
+    </div>
+</div>
+
+{{ 'section-text-on-background.css' | asset_url | stylesheet_tag }}
+
+<style>
+    .text-on-background {
+        background-image: url("{{ section.settings.bcg | image_url: width: 1440 }}");
+    }
+</style>
+
+{% schema %}
+{
+    "name": "Text on background",
+    "settings": [
+        {
+            "type": "richtext",
+            "id": "heading",
+            "label": "Heading",
+            "default": "<p>Guilt-free satisfaction for every occasion.</p>"
+        },
+        {
+            "type": "richtext",
+            "id": "subheading",
+            "label": "Subheading",
+            "default": "<p>Yes, you can actually eat TALA in space.</p><p>Now you just have to figure out how to get</p><p>there.</p>"
+        },
+        {
+            "type": "image_picker",
+            "id": "bcg",
+            "label": "Background image"
+        }
+    ]
+}
+{% endschema %}

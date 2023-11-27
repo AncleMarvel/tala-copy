@@ -30,11 +30,20 @@
         "left_text": "SO CRUNCHY I GET NOISE COMPLAINTS.",
         "right_text": "THIS IS WHAT \"FRUIT SNACKS\" SHOULD HAVE ALWAYS BEEN"
       }
+    },
+    "text-on-background": {
+      "type": "text-on-background",
+      "settings": {
+        "heading": "<p>Guilt-free satisfaction for <em>every occasion.<\/em><\/p>",
+        "subheading": "<p>Yes, you can actually eat TALA in space.<\/p><p>Now you just have to figure out how to get<\/p><p>there.<\/p>",
+        "bcg": "shopify:\/\/shop_images\/stars.gif"
+      }
     }
   },
   "order": [
     "hero",
     "products-list",
-    "text-grid"
+    "text-grid",
+    "text-on-background"
   ]
 }
