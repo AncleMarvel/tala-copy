@@ -1,0 +1,33 @@
+.c-header {
+  width: 100%;
+}
+
+.header--inner {
+  width: 100%;
+  padding: 0 var(--ml);
+  padding-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cart-button {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  background: none;
+  border: none;
+  margin-left: auto;
+  margin-right: 4vw;
+}
+.cart-button:focus-visible {
+  outline: none;
+  background: none;
+  border: none;
+}
