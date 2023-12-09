@@ -14,7 +14,7 @@
     "products-list": {
       "type": "products-list",
       "settings": {
-        "heading": "<p>We're bringing fruit snacks back to their roots with <em>perfectly ripe fruit bursting with flavor<\/em>.<\/p>",
+        "heading": "<p>We're bringing fruit snacks back to <\/p><p>their roots with <em>perfectly ripe fruit bursting with flavor<\/em>.<\/p>",
         "header_label": "AVAILABLE IN",
         "p_list": [
           "the-3p-fulfilled-snowboard",
