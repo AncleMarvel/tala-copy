@@ -4,6 +4,17 @@
   "sections": {
     "header": {
       "type": "header",
+      "blocks": {
+        "c31beeb4-3e7e-4199-a7ff-80a3f50e220d": {
+          "type": "menu_links",
+          "settings": {
+            "links_list": "main-menu"
+          }
+        }
+      },
+      "block_order": [
+        "c31beeb4-3e7e-4199-a7ff-80a3f50e220d"
+      ],
       "settings": {
       }
     }

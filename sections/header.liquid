@@ -2,24 +2,51 @@
 
 <div class="c-header">
     <div class="header--inner">
-        <span class="header-logo logo-text">
+        <a href="/" id="logo" class="header-logo logo-text">
             {{ settings.logo_text }}
-        </span>
+        </a>
         <button class="cart-button" type="button">
             {{ 'templates.cart.cart' | t }}
         </button>
-        <button id="menu" class="hamburger hamburger--collapse" type="button">
-            <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
-            </span>
-        </button>
+        <div class="menu-wrapper">
+            <button id="menu-button" class="hamburger hamburger--collapse" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+    </div>
+    <div id="menu" class="c-header__menu">
+        <div class="c-header__menu--inner">
+            <h1 class="c-header__menu_heading c-h1">
+                MENU
+            </h1>
+        </div>
+        <div class="c-header__menu--container">
+            {% for block in section.blocks %}
+                {% if block.type == 'menu_links' %}
+                    <ul class="c-header__menu--links">
+                        {% assign links = block.settings.links_list.links %}
+                        {% for link in links %}
+                            <li class="c-header__menu--link-wrapper">
+                                <a href="{{ link.url }}" class="c-header__menu--link menu-link">
+                                    {{ link.title }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endfor %}
+        </div>
     </div>
 </div>
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-            $('#menu').click(function (e) {
+            $('#menu-button').click(function (e) {
                 $(this).toggleClass('is-active');
+                $('#menu').toggleClass('is-active');
+                $('#logo').toggleClass('logo--dark');
             });
         }
     );
@@ -29,6 +56,19 @@
 {% schema %}
   {
     "name": "Header",
-    "settings": []
+    "settings": [],
+    "blocks": [
+        {
+            "name": "Menu links",
+            "type": "menu_links",
+            "settings": [
+                {
+                    "type": "link_list",
+                    "id": "links_list",
+                    "label": "Links list"
+                }
+            ]
+        }
+    ]
   }
 {% endschema %}
